@@ -46,6 +46,12 @@
     justify-content: center;
 }
 
+@mixin bg-cover() {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 @mixin font-r($size , $weight ,$height , $spacing, $color) {
     font-family: $rubik;
     font-size: $size ;
