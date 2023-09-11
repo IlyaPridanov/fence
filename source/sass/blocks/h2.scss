@@ -1,11 +1,11 @@
 .h2 {
     margin: 0;
 
-    @include font-r(52px,350,1,0,#244F68);
+    @include font-r(44px,600,1,0,$turquoise);
 }
 
-@media (max-width:500px) {
+@media (max-width:576px) {
     .h2 {
-        font-size: 12vw;
+        font-size: 5.6vw;
     }
 }

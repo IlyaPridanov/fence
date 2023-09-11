@@ -1,0 +1,19 @@
+-
+    var arr = [
+        {icon:"#icon-advantages-1",width:"44",height:"43",text:"We offer a wide range of fences, from economy to premium, tailored to meet the unique requirements of our customers."},
+        {icon:"#icon-advantages-2",width:"39",height:"45",text:"Including a service life of up to 20 years"},
+        {icon:"#icon-advantages-3",width:"40",height:"44",text:"Free delivery"},
+    ]
+
+section.advantages
+    .container.advantages__container
+        h2.h2.advantages__caption Advantages:
+        p.advantages__text
+            |Our fencing solutions come with numerous advantages, including a service life of up to 20 years due to our use of high-quality materials and proper installation by our experienced craftsmen. Additionally, we provide free, quick, and safe delivery.
+        ul.advantages__list            
+            each item in arr
+                li
+                    .advantages__svg
+                        svg(width=item.width height=item.height)
+                            use(xlink:href=item.icon)
+                    p!=item.text
