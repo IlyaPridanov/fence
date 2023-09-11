@@ -61,6 +61,7 @@
 
     background-color: $white;
     border-radius: 20px;
+    box-shadow: 25px 35px 65px 0px rgba($grey-3, 0.16);
 
     & p {
         margin: 0 0 24px;
@@ -108,5 +109,81 @@
 
         background-color: $green;
         border-radius: 12px;
+    }
+}
+
+@media(max-width:1200px) {
+    .main-top__container {
+        padding-bottom: 210px;
+    }
+
+    .main-top__text-column {
+        padding-right: 2%;
+    }
+}
+
+@media(max-width:900px) {
+    .main-top__container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .main-top__bear {
+        display: none;
+    }
+
+    .main-top__container {
+        display: block;
+    }
+
+    .main-top__text-column {
+        margin-bottom: 75px;
+    }
+
+    .main-top__link {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:576px) {
+    .main-top__big-container {
+        background-position: center top;
+        background-size: auto 84%;
+    }
+
+    .main-top__container {
+        padding-top: 63px;
+        padding-bottom: 25px;
+    }
+
+    .main-top__text-column {
+        margin-bottom: 35px;
+    }
+
+    .main-top__caption {
+        margin-bottom: 22px;
+
+        font-size: 30px;
+    }
+
+    .main-top__text {
+        margin-bottom: 22px;
+
+        font-size: 18px;
+    }
+
+    .main-top__form {
+        padding: 40px 18px;
+
+        & p {
+            margin-bottom: 13px;
+        }
+
+        & label {
+            & span {
+                font-size: 14px;
+                letter-spacing: 0.03em;
+            }
+        }
     }
 }

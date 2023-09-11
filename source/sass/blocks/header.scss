@@ -140,6 +140,10 @@
 }
 
 @media (max-width: 576px) {
+    .header__row {
+        padding-bottom: 23px;
+    }
+
     .header__logo {
         flex: 0 0 auto;
     }
