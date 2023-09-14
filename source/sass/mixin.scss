@@ -70,5 +70,14 @@
     color: $color;
 }
 
+@mixin font-g($size , $weight ,$height , $spacing, $color) {
+    font-family: $geometria;
+    font-size: $size ;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
 
 

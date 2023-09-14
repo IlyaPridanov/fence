@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  if (window.matchMedia('(max-width: 1024px)')) {
+  if (window.matchMedia('(max-width: 1024px)').matches) {
     jQuery('.nav__two').hide();
     jQuery('.nav__item').on('click' , function () {
         jQuery(this).toggleClass('active');
