@@ -16,15 +16,15 @@
             var autoHeight = false;
             var breakpoints = {
                 320: {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 7,
                 },
                 768: {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 15,
                 },
                 1200: {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 24,
                 },
             };

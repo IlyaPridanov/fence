@@ -1,0 +1,51 @@
+.our-process {
+    @include bg-cover();
+    padding: 70px 0 60px;
+
+    & h2 {
+        margin-bottom: 41px;
+
+        color: $white;
+    }
+
+    & ul {
+        @include list();
+        display: flex;
+        flex-wrap: wrap;
+        counter-reset: list;
+    }
+
+    & li {
+        flex: 0 0 50%;
+        margin-bottom: 40px;
+
+        &::before {
+            counter-increment: list;
+            content: "" counter(list);
+
+            @include center();
+            width: 66px;
+            height: 66px;
+
+            @include font-r(24px,700,1,0,$white);
+
+            background-color: $green;
+            border-radius: 50%;
+            outline: 1px solid $green;
+            outline-offset: 12px;
+        }
+    }
+
+    & h3 {
+        margin: 0;
+        margin-bottom: 40px;
+
+        @include font-r(24px,700,1,0,$white);
+    }
+
+    & p {
+        margin: 0;
+
+        @include font-p(20px,500,1,0,$white);
+    }
+}

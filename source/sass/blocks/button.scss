@@ -1,9 +1,9 @@
 .button {
-    @include hover();
     @include center();
-    @include font-p(16px,300,1,0,#FFFFFF);
-    padding: 6px;
-    background-color: #CDAD98;
-    border: 1px solid #FFFFFF;
-    outline: 1px solid #CDAD98;
+
+    @include font-p(16px,700,1.2,0,$white);
+
+    background-color: $green;
+    border-radius: 12px;
+    box-shadow: $button-shadow;
 }

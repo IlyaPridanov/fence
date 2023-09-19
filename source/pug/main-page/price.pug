@@ -1,0 +1,39 @@
+-
+    var list = [
+        {
+            img:"img/price-1.png",
+            name:"Metal Board Fences",
+            price:"от 50$ l/ft",
+        },
+        {
+            img:"img/price-2.png",
+            name:"Wooden Fences",
+            price:"от 45$ l/ft",
+        },
+        {
+            img:"img/price-3.png",
+            name:"Chain-link Fences",
+            price:"от 30$ l/ft",
+        },
+        {
+            img:"img/price-4.png",
+            name:"3D Fences",
+            price:"от 30$ l/ft",
+        },
+        {
+            img:"img/price-5.png",
+            name:"Vinyl Fences",
+            price:"от 45$ l/ft",
+        },
+    ]
+
+section.price
+    .container.price__container
+        h2.h2 Price
+        ul
+            each item in list
+                li.card.price__card
+                    img(src=item.img)
+                    h3!=item.name 
+                    p!=item.price 
+                    a.button(href="#") Contact us

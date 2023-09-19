@@ -35,16 +35,11 @@
     flex: 0 0 167px;
     @include hover();
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     width: 167px;
     height: 55px;
 
-    @include font-p(16px,500,1,normal,$white);
-
-    background-color: $green;
-    border-radius: 12px;
+    box-shadow: none;
 }
 
 .header__nav {

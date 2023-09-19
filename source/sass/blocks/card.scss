@@ -1,0 +1,33 @@
+.card {
+    padding: 20px 20px 40px 20px;
+
+    & h3 {
+        margin: 0;
+        margin-bottom: 40px;
+
+        @include font-p(24px,600,1.2,0,$black-3);
+    }
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 334px;
+        margin-bottom: 30px;
+
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    & p {
+        margin: 0;
+        margin-bottom: 40px;
+
+        @include font-p(44px,600,1.2,0,$black-3);
+        text-align: center;
+    }
+
+    & a {
+        width: 100%;
+        height: 60px;
+    }
+}

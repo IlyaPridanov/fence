@@ -1,0 +1,24 @@
+-
+    var arr = [
+        "Fixing leaning fences;",
+        "Welding hinges on gates or wickets;",
+        "Relocating existing fences;",
+        "Installing gates or wickets into existing fences;",
+        "Replacing old wooden fences with wooden or metal board or chain link fences.",
+    ]
+
+section.repair
+    .container.repair__container
+        h2.h2 Repair Services for all Types of Fences
+        p At FenceShop, we specialize in repairing all types of fences, gates, and wickets. Our services include:
+        ul
+            each item in arr
+                li!=item
+        p Whether you need minor repairs or major renovations, our experienced craftsmen can handle any job. Contact us today for an accurate quote and professional advice. We guarantee courteous and precise service!
+        form(action="#") 
+            p Please leave an inquiry now and receive an accurate quote within <strong>5 minutes.</strong>
+            label
+                span Phone number:
+                input(type="tel", placeholder="+1")
+                button.button(type="button") Submit
+                

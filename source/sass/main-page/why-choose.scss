@@ -1,0 +1,19 @@
+.why-choose {
+    margin-bottom: 80px;
+    padding-top: 80px;
+
+    & h2 {
+        margin-bottom: 60px;
+    }
+
+    & ul {
+        @include list();
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & li {
+        padding: 30px 45px 30px 40px;
+        @include font-p(16px,500,1.5,0,$black-2);
+    }
+}

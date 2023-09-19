@@ -52,6 +52,7 @@
     }
 
     & a {
+        @include hover();
         @include center();
         margin: 0 auto;
         width: 276px;

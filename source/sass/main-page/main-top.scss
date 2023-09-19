@@ -99,16 +99,12 @@
 
     & button {
         @include hover();
-        @include btn();
-        @include center();
+        padding: 0;
 
         width: 100%;
         height: 60px;
 
-        @include font-p(16px,500,1,0,$white);
-
-        background-color: $green;
-        border-radius: 12px;
+        border: none;
     }
 }
 
