@@ -1,0 +1,15 @@
+section.gallery
+    .container.gallery__container
+        h2.h2 View gallery
+        .slider.gallery__slider
+            .swiper-container
+                .swiper-wrapper
+                    each item in ["img/price-3.png","img/building-2.png","img/gallery-1.png"]
+                        .swiper-slide
+                            img(src=item)
+            button.js-btn-next(type="button")
+                svg(width="10" height="18")
+                    use(xlink:href="#icon-arrow-slider")
+            button.js-btn-prev(type="button")
+                svg(width="10" height="18")
+                    use(xlink:href="#icon-arrow-slider")

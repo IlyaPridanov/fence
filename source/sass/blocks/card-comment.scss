@@ -1,0 +1,46 @@
+.card-comment {
+    position: relative;
+    box-sizing: border-box;
+    padding: 24px;
+
+    border: 1px solid $grey-5;
+    border-radius: 20px;
+    background-color: $white;
+    transition: $transition;
+    transform: scale(0.9);
+    transform-origin: center;
+
+    & > svg {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &.swiper-slide-active {
+        z-index: 2;
+        transform: scale(1.4);
+    }
+
+    &.swiper-slide-next,
+    &.swiper-slide-prev {
+        transform: scale(1.2);
+    }
+}
+
+.card-comment__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > img {
+        flex: 0 0 48px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+}
+
+.card-comment__column {
+    flex: 0 0 calc(100% - 48px - 14px);
+}

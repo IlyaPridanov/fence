@@ -46,8 +46,14 @@
     justify-content: center;
 }
 
-@mixin font-b($size , $weight ,$height , $spacing, $color) {
-    font-family: $beba;
+@mixin bg-cover() {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin font-r($size , $weight ,$height , $spacing, $color) {
+    font-family: $rubik;
     font-size: $size ;
     font-weight: $weight;
     line-height: $height;
@@ -55,8 +61,17 @@
     color: $color;
 }
 
-@mixin font-h($size , $weight ,$height , $spacing, $color) {
-    font-family: $hel;
+@mixin font-p($size , $weight ,$height , $spacing, $color) {
+    font-family: $poppins;
+    font-size: $size ;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
+@mixin font-g($size , $weight ,$height , $spacing, $color) {
+    font-family: $geometria;
     font-size: $size ;
     font-weight: $weight;
     line-height: $height;

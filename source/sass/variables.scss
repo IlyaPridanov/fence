@@ -1,7 +1,10 @@
-$beba: "BebasNeue", "Arial", sans-serif;
-$hel: "HelveticaNeueCyr", "Arial", sans-serif;
+$rubik: "Rubik", "Arial", sans-serif;
+$poppins: "Poppins", "Arial", sans-serif;
+$geometria: "Geometria", "Arial", sans-serif;
 
-$black: #000000;
+$black: #0B2E29;
+$black-2: rgb(85, 91, 115);
+$black-3: rgb(31, 39, 68);
 
 $white: #ffffff;
 
@@ -20,9 +23,19 @@ $retina-dppx: 1.5dppx;
 
 $blue: #1c3b73;
 
-$grey: #eaeaeb;
-$grey-2: #2c363b;
+$grey: #555B73;
+$grey-2: rgba(242, 243, 246, 1);
+$grey-3: rgba(146, 106, 120, 1);
+$grey-4: rgba(248, 249, 254, 1);
+$grey-5: rgba(226, 230, 249, 1);
 
-$red: #ff0000;
+$red: #EE3147;
 
 $gutter: 28px;
+
+$green: rgb(105, 185, 157);
+$turquoise: rgb(5, 68, 87);
+
+$building-img-shadow: 25px 35px 65px 0px rgba(18, 19, 40, 0.29);
+$building-link-shadow: 0px 8px 25px 0px rgba(15, 41, 60, 0.34);
+$button-shadow: 0px 8px 25px 0px rgba(25, 159, 112, 0.34);

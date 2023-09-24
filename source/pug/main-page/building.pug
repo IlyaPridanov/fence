@@ -1,0 +1,47 @@
+-
+    var list1 = [
+        "Natural beauty - the pattern of the wooden cut always looks beautiful and adds a touch of elegance to any landscape.",
+        "Versatility - wooden board fences can be tailored to fit any landscape and can be painted in any color.",
+        "Lightweight - wooden board fences are easy to handle and install.",
+    ]
+
+    var list2 = [
+        "Wood requires special treatment to protect it from weather conditions, which can increase the cost of installation. This procedure should be repeated every 1-2 years. Painted wooden board fences require regular repainting to maintain their appearance.",
+        "Wood is combustible, which poses a potential fire hazard.",
+        "The service life of a wooden board fence is only about 10 years on average.",
+        "The cost of good quality wood can be quite high.",
+    ]
+
+    var list3 = [
+        "Firstly, they are highly resistant to corrosion due to the protective galvanizing and polymer coating, which ensures they remain in great condition even when exposed to moisture.",
+        "Additionally, these fences are lightweight and easy to transport due to their compact design.",
+        "Installing a metal board fence is also incredibly straightforward, and no specialized skills are required.",
+        "Beyond their practical benefits.",
+        "Furthermore, they are highly durable and can withstand severe weather conditions, temperature changes, and shocks without sustaining damage.",
+        "Lastly, they are not flammable, providing an extra layer of safety and peace of mind.",
+        "FenceShop offers a wide range of high-quality metal board fences that can be customized to match any color palette."
+    ]
+
+section.building(style="background-image:url('img/building-bg.jpg');")
+    .container.building__container
+        h2.h2 Building a fence is a responsible business!
+        p When it comes to installing a fence, it's important to consider all factors and make a responsible decision. One common question is whether to choose metal or wood for the material.
+        .building__row
+            .building__column
+                h3.h3 Advantages and features of wooden board fences:
+                ul 
+                    each item in list1
+                        li!=item
+                h3.h3 However, there are some disadvantages to consider:
+                ul 
+                    each item in list2
+                        li!=item            
+            img(src="img/building-1.png" alt="building")
+        .building__row
+            img(src="img/building-2.png" alt="building")
+            .building__column 
+                h3.h3 Metal board fences offer numerous advantages over other materials.
+                    ul 
+                        each item in list3
+                            li!=item     
+        a(href="#") Contact us

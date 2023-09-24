@@ -1,0 +1,13 @@
+.price {
+    & ul {
+        @include list();
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.price__card {
+    flex: 0 0 calc(50% - 12px);
+    margin-bottom: 30px;
+}

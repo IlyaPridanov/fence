@@ -1,0 +1,28 @@
+-
+    var arr = [
+        {
+            caption: "Contact Us",
+            text: "Fill out one of our forms or contact our specialist.",
+        },
+        {
+            caption: "Get estimate",
+            text: "Get a free estimate for your specific project and build.",
+        },
+        {
+            caption: "Schedule a Time",
+            text: "Schedule an appointment for a detailed inspection.",
+        },
+        {
+            caption: "Your Pro Arrives",
+            text: "After an agreement, your pro is ready to build!",
+        },
+    ]
+
+section.our-process(style="background-image: url('img/our-process-bg.jpg');")
+    .container
+        h2.h2 OUR PROCESS How It Works?
+        ul 
+            each item in arr 
+                li 
+                    h3!=item.caption 
+                    p!=item.text 

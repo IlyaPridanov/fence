@@ -1,0 +1,52 @@
+-
+    var arr = [
+        {
+            caption: "Lorem ipsum dolor sit.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim alias dicta ipsum, fugiat laboriosam obcaecati quibusdam sed earum perspiciatis, minima odit! Nemo, numquam blanditiis. Aspernatur.",
+            img: "img/ava-1.png",
+            name: "Василий Орлов",
+        },
+        {
+            caption: "Lorem ipsum dolor sit amet.",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur aliquam exercitationem officia mollitia quo alias totam molestiae aspernatur ratione facilis, minus ipsa nesciunt facere ducimus quidem magni ex delectus?",
+            img: "img/ava-1.png",
+            name: "Василий Орлов",
+        },
+        {
+            caption: "Nobody knows Portland and the peninsula better than David.",
+            text: "My wife and I had a dream of downsizing from our house in Cape Elizabeth into a small condo closer to where we work and play in Portland. ",
+            img: "img/ava-1.png",
+            name: "Василий Орлов",
+        },
+        {
+            caption: "Lorem, ipsum dolor.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, sunt aspernatur. Veritatis libero, vero animi facilis non velit delectus mollitia quod perspiciatis ducimus.",
+            img: "img/ava-1.png",
+            name: "Василий Орлов",
+        },
+        {
+            caption: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate voluptatum ea velit quaerat a eum dolores repellat temporibus debitis soluta corporis rerum provident unde est nihil excepturi incidunt error, iste ratione!",
+            img: "img/ava-1.png",
+            name: "Василий Орлов",
+        },
+    ]
+
+section.testimonials
+    .container
+        h2.h2 Testimonials
+        .slider.testimonials__slider
+            .swiper-container
+                .swiper-wrapper
+                    each item in arr
+                        article.swiper-slide.card-comment.testimonials__comment
+                            svg(width="42" height="34")
+                                use(xlink:href="#icon-quotes")
+                            h3!=item.caption
+                            p!=item.text
+                            .card-comment__row
+                                img(src=item.img, alt="avatar")
+                                .card-comment__column
+                                    h4!=item.name
+                                    span.card-comment__post Заказчик
+            .swiper-pagination
