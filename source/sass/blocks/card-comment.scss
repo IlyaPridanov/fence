@@ -1,7 +1,7 @@
 .card-comment {
     position: relative;
     box-sizing: border-box;
-    padding: 24px;
+    padding: 10px 16px;
 
     border: 1px solid $grey-5;
     border-radius: 20px;
@@ -12,35 +12,72 @@
 
     & > svg {
         display: block;
-        margin-bottom: 24px;
+        width: 26px;
+        margin-bottom: 6px;
     }
 
     &.swiper-slide-active {
         z-index: 2;
-        transform: scale(1.4);
+        transform: scale(1.6);
     }
 
-    &.swiper-slide-next,
     &.swiper-slide-prev {
-        transform: scale(1.2);
+        z-index: 1;
+        transform: scale(1.3) translateX(-33%);
+
+    }
+
+    &.swiper-slide-next {
+        z-index: 1;
+        transform: scale(1.3) translateX(33%);
+    }
+
+    & h3 {
+        margin: 0;
+        margin-bottom: 13px;
+
+        @include font-p(11px,600,1.5,0,$black);
+    }
+
+    & p {
+        margin: 0 0 9px;
+        margin-bottom: 16px;
+
+        @include font-p(10px,400,1.5,0,$black);
     }
 }
 
 .card-comment__row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.card-comment__avatar {
+    flex: 0 0 30px;
+    width: 30px;
+    max-width: 30px;
 
     & > img {
-        flex: 0 0 48px;
+        flex: 0 0 45px;
         display: block;
-        width: 48px;
-        height: 48px;
+        width: 100%;
         border-radius: 50%;
-        object-fit: contain;
     }
 }
 
 .card-comment__column {
-    flex: 0 0 calc(100% - 48px - 14px);
+    flex: 0 0 calc(100% - 30px - 9px);
+
+    & h4 {
+        margin: 4px 0 0;
+
+        @include font-n(10px,600,1.1,0,$black);
+    }
+
+    & span {
+        margin: 0;
+
+        @include font-n(8px,400,1.1,0,$grey-6);
+    }
 }
