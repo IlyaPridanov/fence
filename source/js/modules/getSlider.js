@@ -77,7 +77,7 @@
         if (currentValue.classList.contains = ".testimonials__slider") {
             const sliderWrapper = currentValue.querySelector(".swiper-wrapper");
             console.log(slider.height);
-            sliderWrapper.style.minHeight = `${slider.height * 2.8}px`;
+            sliderWrapper.style.minHeight = `${slider.height * 2.4}px`;
         }
     });
 

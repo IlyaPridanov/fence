@@ -79,5 +79,14 @@
     color: $color;
 }
 
+@mixin font-n($size , $weight ,$height , $spacing, $color) {
+    font-family: $nunito;
+    font-size: $size ;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
 
 
