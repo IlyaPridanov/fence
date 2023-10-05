@@ -1,8 +1,8 @@
 -
     var social = [
-        {icon:"#icon-fb",social:"Facebook",width:"14",height:"14"},
         {icon:"#icon-insta",social:"Instagramm",width:"14",height:"14"},
         {icon:"#icon-yt",social:"Youtube",width:"16",height:"12"},
+        {icon:"#icon-fb",social:"Facebook",width:"14",height:"14"},
     ]
 
 footer.footer
@@ -24,5 +24,18 @@ footer.footer
                     li
                         a(href="#")!=item 
         .footer__social-column 
-
+            h3.footer__caption Мы в соцсетях
+            ul.footer__social-list
+                each itemSocial in social
+                    li  
+                        a(href="#", aria-label=itemSocial.social) 
+                            svg(width=itemSocial.width, height=itemSocial.height)
+                                use(xlink:href=itemSocial.icon)
+            .footer__tel 
+                sapn Телефон: 
+                a(href="tel:+19168237859") +1 916 8237859
+            .footer__mail   
+                span Email: 
+                a(href="mailto:absfencemaster@gmail.com") absfencemaster@gmail.com
+            p.footer__copy @WebBand
         
