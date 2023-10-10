@@ -6,7 +6,7 @@
     ]
 
     var list2 = [
-        "Wood requires special treatment to protect it from weather conditions, which can increase the cost of installation. This procedure should be repeated every 1-2 years. Painted wooden board fences require regular repainting to maintain their appearance.",
+        "Wood requires special treatment to protect it from weather conditions, which can increase the cost of installation. This procedure&nbsp;should be repeated every 1-2 years. Painted wooden board&nbsp;fences require regular repainting to maintain their<br>appearance.",
         "Wood is combustible, which poses a potential fire hazard.",
         "The service life of a wooden board fence is only about 10 years on average.",
         "The cost of good quality wood can be quite high.",
@@ -26,22 +26,22 @@ section.building(style="background-image:url('img/building-bg.jpg');")
     .container.building__container
         h2.h2 Building a fence is a responsible business!
         p When it comes to installing a fence, it's important to consider all factors and make a responsible decision. One common question is whether to choose metal or wood for the material.
+        h3.h3 Advantages and features of wooden board fences:
         .building__row
             .building__column
-                h3.h3 Advantages and features of wooden board fences:
                 ul 
                     each item in list1
-                        li!=item
+                        li.ok-item!=item
                 h3.h3 However, there are some disadvantages to consider:
                 ul 
                     each item in list2
-                        li!=item            
+                        li.no-ok-item!=item            
             img(src="img/building-1.png" alt="building")
         .building__row
             img(src="img/building-2.png" alt="building")
             .building__column 
                 h3.h3 Metal board fences offer numerous advantages over other materials.
-                    ul 
-                        each item in list3
-                            li!=item     
+                ul 
+                    each item in list3
+                        li.ok-item!=item     
         a(href="#") Contact us

@@ -1,0 +1,11 @@
+.ok-item {
+    &::before {
+        content: url("../img/icon-ok.svg");
+
+        pointer-events: none;
+
+        position: absolute;
+        left: 4px;
+        top: 6px;
+    }
+}

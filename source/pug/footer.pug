@@ -12,9 +12,9 @@ footer.footer
                 svg(width="137" height="41")
                     use(xlink:href="#icon-footer-logo")
             form(action="#").footer__form
-                label
-                    span Подписка
-                    input(type="email" placeholder="Email")
+                label(for="footer-email-submit").footer__caption Подписка
+                .footer__form-row
+                    input(type="email" id="footer-email-submit" placeholder="Email")
                     button(type="submit").button Submit
             p.footer__copy License # 1101698
         .footer__nav-column
@@ -32,7 +32,7 @@ footer.footer
                             svg(width=itemSocial.width, height=itemSocial.height)
                                 use(xlink:href=itemSocial.icon)
             .footer__tel 
-                sapn Телефон: 
+                span Телефон: 
                 a(href="tel:+19168237859") +1 916 8237859
             .footer__mail   
                 span Email: 

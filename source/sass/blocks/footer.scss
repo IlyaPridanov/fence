@@ -3,11 +3,142 @@
 }
 
 .footer__row {
-    padding: 52px 49px;
+    padding: 40px 49px 47px 124px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__nav {
     @include list();
+
+    & li {
+        margin-bottom: 18px;
+    }
+
+    & a {
+        @include hover();
+
+        font-size: 16px;
+        font-weight: 400;
+        color: $black-4;
+    }
+}
+
+.footer__caption {
+    margin: 0;
+
+    @include font-p (21px,500,1,0,$black);
+}
+
+.footer__logo-column {
+    flex: 0 0 auto;
+}
+
+.footer__nav-column {
+    flex: 0 0 auto;
+    margin: 3px 10.8% 0 12%;
+
+    & .footer__caption {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__social-column {
+    flex: 0 0 auto;
+
+    & .footer__caption {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 49px;
+}
+
+.footer__form {
+    & label {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+
+    width: 412px;
+
+    background-color: $white;
+    border-radius: 12px;
+
+
+    & button {
+        flex:  0 0 149px;
+        height: 50px;
+
+        border: none;
+    }
+
+    & input {
+        flex:  0 0 calc(100% - 149px);
+        padding: 12px 16px;
+
+        @include font-p (16px,500,1,0,$black);
+
+        border: none;
+
+        &::placeholder {
+            color: $grey-10;
+        }
+    }
+}
+
+.footer__copy {
+    margin: 0;
+
+    color: $black-4;
+}
+
+.footer__social-list {
+    @include list();
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+
+    & li {
+        margin-right: 16px;
+    }
+
+    & a {
+        @include hover();
+        @include center();
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+        background-color: $white;
+    }
+}
+
+.footer__tel {
+    margin-bottom: 27px;
+    @include font-p (20px,500,1,0,$black-5);
+
+    & a {
+        @include hover();
+        color: $black-5;
+    }
+}
+
+.footer__mail {
+    margin-bottom: 52px;
+    @include font-p (16px,500,1,0,$black-5);
+
+    & a {
+        @include hover();
+        color: $black-5;
+    }
 }

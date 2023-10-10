@@ -7,6 +7,8 @@
     background-size: cover;
     
     & h2 {
+        max-width: 1000px;
+        width: 100%;
         margin-bottom: 15px;
         
         color: $white;
@@ -14,11 +16,15 @@
     }
 
     & h3 {
-        margin-bottom: 30px;
+        margin-bottom: 53px;
+
+        line-height: 1.2;
         letter-spacing: 0.01em;
     }
     
     & p {
+        max-width: 1000px;
+        width: 100%;
         margin: 0;
         margin-bottom: 14px;
         
@@ -27,6 +33,7 @@
 
     & img {
         display: block;
+        margin-top: -20px; 
         flex: 0 0 484px;
 
         box-shadow: $building-img-shadow;
@@ -36,6 +43,15 @@
             flex: 0 0 484px;
 
             padding-right: 0;
+
+            & h3 {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+            width: 484px;
         }
     }
 
@@ -43,18 +59,23 @@
         @include list();
 
         & + h3 {
-            margin-top: 35px;
+            margin-top: 42px;
+            margin-bottom: 30px;
         }
     }
 
     & li {
-        @include font-g(16px,400,1.2,0,$white);
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 35px;
+
+        @include font-g(16px,400,1.4,0,$white);
     }
 
     & a {
         @include hover();
         @include center();
-        margin: 0 auto;
+        margin: 41px auto 0;
         width: 276px;
         height: 62px;
 
@@ -67,16 +88,31 @@
 }
 
 .building__container {
-    padding-right: 100px;
+    & > h2 {
+        margin-right: 100px;
+    }
+
+    & > h3 {
+        margin-right: 100px;
+    }
+
+    & p {
+        margin-right: 100px;
+    }
 }
 
 .building__row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
-    margin-top: 74px;
+    margin-right: 84px;
+    // margin-top: 74px;
 
-    &:last-child {
+    // &:first-child {
+    //     margin-top: 0;
+    // }
+
+    &:last-of-type {
         margin-bottom: 0;
     }
 }

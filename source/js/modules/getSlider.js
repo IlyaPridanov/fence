@@ -30,7 +30,26 @@
                     spaceBetween: 24,
                 },
             };
-            if (slider.classList.contains = ".testimonials__slider") {
+            if (slider.classList.contains("gallery__slider")) {
+                centeredSlides = true;
+                autoHeight = false;
+                // setWrapperSize = true;
+                breakpoints = {
+                    320: {
+                        slidesPerView: 3,
+                        spaceBetween: 28,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 28,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 28,
+                    },
+                };
+            }
+            if (slider.classList.contains("testimonials__slider")) {
                 centeredSlides = true;
                 autoHeight = false;
                 // setWrapperSize = true;
@@ -71,16 +90,26 @@
             }
         }
     };
+    
+    const sliderTestimonials = document.querySelector(".testimonials__slider");
+    
+    if (sliderTestimonials) {
+        const slideAll = sliderTestimonials.querySelectorAll(".swiper-slide");
+        const wrapper = sliderTestimonials.querySelector(".swiper-wrapper");
+        let slideMaxHeight = 0;
+        slideAll.forEach(function(slideItem) {
+            if (slideItem.offsetHeight > slideMaxHeight) {
+                slideMaxHeight = slideItem.offsetHeight;
+            }
+        })
+        console.log(slideMaxHeight);
+        wrapper.style.minHeight = `${slideMaxHeight * 2.4}px`;
+    }
 
     sliderContainers.forEach(function (currentValue) {
         const slider = getBlockSlider(currentValue);
-        if (currentValue.classList.contains = ".testimonials__slider") {
-            const sliderWrapper = currentValue.querySelector(".swiper-wrapper");
-            console.log(slider.height);
-            sliderWrapper.style.minHeight = `${slider.height * 2.4}px`;
-        }
     });
-
+    
     // var swiper = new Swiper(".big-gallery__min-slider", {
     //     spaceBetween: 0,
     //     loop: true,

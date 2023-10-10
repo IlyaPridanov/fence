@@ -1,6 +1,6 @@
 .why-choose {
-    margin-bottom: 80px;
-    padding-top: 80px;
+    margin-bottom: 88px;
+    padding-top: 85px;
 
     & h2 {
         margin-bottom: 60px;
@@ -8,12 +8,15 @@
 
     & ul {
         @include list();
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px;
     }
 
     & li {
-        padding: 30px 45px 30px 40px;
+        min-height: 255px;
+        padding: 37px 45px 30px 40px;
         @include font-p(16px,500,1.5,0,$black-2);
+        box-shadow: $big-shadow;
     }
 }

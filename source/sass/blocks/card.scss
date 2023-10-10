@@ -3,7 +3,7 @@
 
     & h3 {
         margin: 0;
-        margin-bottom: 40px;
+        margin-bottom: 31px;
 
         @include font-p(24px,600,1.2,0,$black-3);
     }
@@ -20,7 +20,7 @@
 
     & p {
         margin: 0;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
 
         @include font-p(44px,600,1.2,0,$black-3);
         text-align: center;

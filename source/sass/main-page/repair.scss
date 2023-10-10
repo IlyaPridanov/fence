@@ -1,9 +1,12 @@
 .repair {
-    padding-top: 40px;
+    margin-bottom: 83px;
 
     & h2 {
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 27px;
+
+        font-size: 49px;
+        line-height: 1.12;
     }
 
     & ul {
@@ -13,27 +16,16 @@
     & li {
         position: relative;
 
-        margin-bottom: 10px;
         padding-left: 30px;
 
-        @include font-p(16px,500,1.2,0,$black-2);
-
-        &::before {
-            content: url("../img/icon-ok.svg");
-
-            pointer-events: none;
-
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+        @include font-p(16px,500,2.5,0,$black-2);
     }
 
     & p {
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 26px;
 
-        @include font-p(16px,500,1.2,0,$black-2);
+        @include font-p(16px,500,1.6,0,$black-2);
         break-inside: avoid;
 
         & strong {
@@ -42,13 +34,16 @@
     }
 
     & form {
-        padding: 57px 40px;
+        padding: 57px 40px 0;
+
+        border: 1px solid $grey-5;
+        border-radius: 20px;
     }
 
     & label {
         & span {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
 
             @include font-p(14px,500,1.2,0,$black-2);
         }
@@ -56,9 +51,10 @@
     
     & input {
         margin-bottom: 20px;
-        padding: 17px 16px;
+        padding: 20px 16px;
         display: flex;
         align-items: center;
+        width: 100%;
 
         @include font-p(16px,500,1.2,0,$black-2);
 
@@ -82,7 +78,12 @@
 }
 
 .repair__container {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 40px 50px 73px;
     columns: 2;
+    column-gap: 48px;
+    width: 1192px;
+
+    border: 1px solid $grey-5;
+    box-shadow: $big-shadow;
+    border-radius: 20px;
 }
