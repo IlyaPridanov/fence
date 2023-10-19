@@ -8,7 +8,7 @@
 }
 
 .advantages__text {
-    margin: 0 5px 20px; 
+    margin: 0 5px 20px;
 
     @include font-p(20px,400,1.4,0,$turquoise);
 }
@@ -48,6 +48,7 @@
 @media(max-width:576px) {
     .advantages {
         padding-top: 57px;
+        padding-bottom: 28px;
     }
 
     .advantages__caption {
@@ -61,7 +62,7 @@
     .advantages__list {
         display: block;
 
-        & li { 
+        & li {
             min-height: 280px;
             margin-bottom: 20px;
             padding: 26px 21px 35px;

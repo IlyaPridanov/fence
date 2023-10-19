@@ -22,26 +22,26 @@
         "FenceShop offers a wide range of high-quality metal board fences that can be customized to match any color palette."
     ]
 
-section.building(style="background-image:url('img/building-bg.jpg');")
+section.building
     .container.building__container
         h2.h2 Building a fence is a responsible business!
         p When it comes to installing a fence, it's important to consider all factors and make a responsible decision. One common question is whether to choose metal or wood for the material.
         h3.h3 Advantages and features of wooden board fences:
         .building__row
             .building__column
-                ul 
+                ul
                     each item in list1
                         li.ok-item!=item
                 h3.h3 However, there are some disadvantages to consider:
-                ul 
+                ul
                     each item in list2
-                        li.no-ok-item!=item            
+                        li.no-ok-item!=item
             img(src="img/building-1.png" alt="building")
         .building__row
             img(src="img/building-2.png" alt="building")
-            .building__column 
+            .building__column
                 h3.h3 Metal board fences offer numerous advantages over other materials.
-                ul 
+                ul
                     each item in list3
-                        li.ok-item!=item     
+                        li.ok-item!=item
         a(href="#") Contact us
