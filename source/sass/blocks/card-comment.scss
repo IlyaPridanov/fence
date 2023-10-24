@@ -81,3 +81,13 @@
         @include font-n(8px,400,1.1,0,$grey-6);
     }
 }
+
+@media (max-width: 576px) {
+    .card-comment {
+        padding: 10px 11px;
+
+        & h3 {
+            font-size: 9px;
+        }
+    }
+}

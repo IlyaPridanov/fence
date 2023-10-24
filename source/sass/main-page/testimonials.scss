@@ -81,3 +81,15 @@
 
     border: none;
 }
+
+@media (max-width: 576px) {
+    .testimonials {
+        padding-top: 50px;
+
+        & h2 {
+            margin-bottom: 0;
+
+            font-size: 21px;
+        }
+    }
+}

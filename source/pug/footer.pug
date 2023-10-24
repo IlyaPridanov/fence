@@ -7,35 +7,33 @@
 
 footer.footer
     .big-container.footer__row
-        .footer__logo-column
-            a(href="/").footer__logo
-                svg(width="137" height="41")
-                    use(xlink:href="#icon-footer-logo")
-            form(action="#").footer__form
-                label(for="footer-email-submit").footer__caption Подписка
-                .footer__form-row
-                    input(type="email" id="footer-email-submit" placeholder="Email")
-                    button(type="submit").button Submit
-            p.footer__copy License # 1101698
+        a(href="/").footer__logo
+            svg(width="137" height="41")
+                use(xlink:href="#icon-footer-logo")
+        form(action="#").footer__form
+            label(for="footer-email-submit").footer__caption Подписка
+            .footer__form-row
+                input(type="email" id="footer-email-submit" placeholder="Email")
+                button(type="submit").button Submit
+        p.footer__copy License # 1101698
         .footer__nav-column
             h3.footer__caption Service
             ul.footer__nav
                 each item in ["Преимущества", "Цены", "Наши работы", "Отзывы"]
                     li
-                        a(href="#")!=item 
-        .footer__social-column 
+                        a(href="#")!=item
+        .footer__social-column
             h3.footer__caption Мы в соцсетях
             ul.footer__social-list
                 each itemSocial in social
-                    li  
-                        a(href="#", aria-label=itemSocial.social) 
+                    li
+                        a(href="#", aria-label=itemSocial.social)
                             svg(width=itemSocial.width, height=itemSocial.height)
                                 use(xlink:href=itemSocial.icon)
-            .footer__tel 
-                span Телефон: 
+            .footer__tel
+                span Телефон:
                 a(href="tel:+19168237859") +1 916 8237859
-            .footer__mail   
-                span Email: 
+            .footer__mail
+                span Email:
                 a(href="mailto:absfencemaster@gmail.com") absfencemaster@gmail.com
-            p.footer__copy @WebBand
-        
+        p.footer__copy @WebBand

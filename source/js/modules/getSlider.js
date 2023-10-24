@@ -36,17 +36,22 @@
                 // setWrapperSize = true;
                 breakpoints = {
                     320: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 28,
+                        centeredSlides: false,
+                    },
+                    577: {
+                        slidesPerView: 2,
+                        spaceBetween: 28,
+                    },
+                    900: {
                         slidesPerView: 3,
                         spaceBetween: 28,
                     },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 28,
-                    },
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 28,
-                    },
+                    // 1200: {
+                    //     slidesPerView: 3,
+                    //     spaceBetween: 28,
+                    // },
                 };
             }
             if (slider.classList.contains("testimonials__slider")) {
@@ -55,11 +60,11 @@
                 // setWrapperSize = true;
                 breakpoints = {
                     320: {
-                        slidesPerView: 5,
+                        slidesPerView: 1.8,
                         spaceBetween: 0,
                     },
-                    768: {
-                        slidesPerView: 5,
+                    577: {
+                        slidesPerView: 3,
                         spaceBetween: 0,
                     },
                     1200: {
@@ -90,9 +95,9 @@
             }
         }
     };
-    
+
     const sliderTestimonials = document.querySelector(".testimonials__slider");
-    
+
     if (sliderTestimonials) {
         const slideAll = sliderTestimonials.querySelectorAll(".swiper-slide");
         const wrapper = sliderTestimonials.querySelector(".swiper-wrapper");
@@ -109,7 +114,7 @@
     sliderContainers.forEach(function (currentValue) {
         const slider = getBlockSlider(currentValue);
     });
-    
+
     // var swiper = new Swiper(".big-gallery__min-slider", {
     //     spaceBetween: 0,
     //     loop: true,

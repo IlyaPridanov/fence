@@ -1,5 +1,6 @@
 .repair {
     margin-bottom: 83px;
+    padding: 0 20px;
 
     & h2 {
         margin: 0;
@@ -48,7 +49,7 @@
             @include font-p(14px,500,1.2,0,$black-2);
         }
     }
-    
+
     & input {
         margin-bottom: 20px;
         padding: 20px 16px;
@@ -86,4 +87,56 @@
     border: 1px solid $grey-5;
     box-shadow: $big-shadow;
     border-radius: 20px;
+}
+
+@media (max-width: 1100px) {
+    .repair {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .repair {
+        margin-bottom: 35px;
+    }
+
+    .repair__container {
+        columns: initial;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .repair {
+        margin-bottom: 50px;
+
+        & h2 {
+            margin-bottom: 16px;
+
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        & p {
+            margin-bottom: 16px;
+
+            line-height: 1.5;
+        }
+
+        & ul {
+            margin-bottom: 18px;
+        }
+
+        & form {
+            padding: 24px 15px 0;
+        }
+
+        & button {
+            margin-bottom: 38px;
+        }
+    }
+
+    .repair__container {
+        padding: 40px 16px;
+    }
 }
