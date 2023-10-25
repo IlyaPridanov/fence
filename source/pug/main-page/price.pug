@@ -27,13 +27,13 @@
         },
     ]
 
-section.price
+section.price(id="price")
     .container.price__container
         h2.h2 Price
         ul
             each item in list
                 li.card.price__card
                     img(src=item.img)
-                    h3!=item.name 
-                    p!=item.price 
+                    h3!=item.name
+                    p!=item.price
                     a.button(href="#") Contact us

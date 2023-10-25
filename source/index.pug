@@ -1,12 +1,20 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset="utf-8")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
-        meta(name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.")
-        title 
-        link(rel="stylesheet" href="css/style.min.css")
-    body
-        ol
-            li
-                a(href="main-page.html") Главная
+extends pug/layout.pug
+block variables
+    - var title = 'Fence'
+
+//- block append head
+//-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+include pug/mixin.pug
+
+block content
+    main.main
+        include pug/main-page/main-top.pug
+        include pug/main-page/advantages.pug
+        include pug/main-page/building.pug
+        include pug/main-page/why-choose.pug
+        include pug/main-page/price.pug
+        include pug/main-page/repair.pug
+        include pug/main-page/gallery.pug
+        include pug/main-page/our-process.pug
+        include pug/main-page/testimonials.pug

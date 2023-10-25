@@ -1,17 +1,43 @@
 -
     var list = [
-        {name:"Fences"},
-        {name:"Price",},
-        {name:"Gallery"},
-        {name:"Testimonials"},
+        {
+            name:"Fences",
+        },
+        {
+            name:"Price",
+            link: "#price",
+        },
+        {
+            name:"Gallery",
+            link: "#gallery",
+        },
+        {
+            name:"Testimonials",
+            link: "/#testimonials",
+        },
     ]
 
     var navTwo = [
-        {name:"Металлические"},
-        {name:"Wood Fences",},
-        {name:"Chain Link fences"},
-        {name:"3D panel fence"},
-        {name:"Vinyl Fences"},
+        {
+            name:"Металлические",
+            link: "/metal-page.html",
+        },
+        {
+            name:"Wood Fences",
+            link: "/metal-page.html",
+        },
+        {
+            name:"Chain Link fences",
+            link: "/metal-page.html",
+        },
+        {
+            name:"3D panel fence",
+            link: "/metal-page.html",
+        },
+        {
+            name:"Vinyl Fences",
+            link: "/metal-page.html",
+        },
     ]
 
 nav.nav.header__nav
@@ -22,9 +48,9 @@ nav.nav.header__nav
                     span.nav__link=item.name
                     svg(width="16" height="9")
                         use(xlink:href="#icon-arrow-min")
-                    ul.nav__two 
+                    ul.nav__two
                         each item2 in navTwo
-                            li 
-                                a(href="#")=item2.name
-                else                
-                    a.nav__link(href="#")=item.name
+                            li
+                                a(href=item2.link)=item2.name
+                else
+                    a.nav__link(href=item.link)=item.name

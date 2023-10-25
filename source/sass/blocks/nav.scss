@@ -67,7 +67,7 @@
 
     background-color: $white;
     border-radius: 0px 0px 10px 10px;
-    
+
 
     & li {
         margin-bottom: 16px;
@@ -124,7 +124,7 @@
 
         &.active {
             padding-bottom: 0;
-            
+
             & > svg {
                 transform: rotate(0deg);
                 transition: $transition;
@@ -134,5 +134,9 @@
 
     .nav__link {
         flex: 0 0 auto;
+
+        &::before {
+            display: none;
+        }
     }
 }

@@ -1,0 +1,29 @@
+extends pug/layout.pug
+block variables
+    -
+        var title = 'Металлические'
+
+        var bannerObj = {
+            img: "metal-bg.jpg",
+            caption: "Metal Board Fences",
+            text: "We are excited to offer a special discount on gates and wickets for orders of 100 l/ft. or more.",
+            saleText: "Скидка 30%",
+        }
+
+        var textObj = {
+            img: "metal-img.png",
+            arr: [
+                "When buying a property, whether with a house or not, owners almost immediately raise the question of installing a secure fence. The ideal option in this case can be a chain-link fence. This material is highly popular due to its lightness, strength, and durability. On average, a high-quality chain-link fence can serve you for 15-20 years.",
+                "How is this even possible? It's all about the material used to manufacture the fence. Chain-link fencing is made of galvanized metal wire, which is coated with a polymer coating. The finished fence turns out to be corrosion-resistant and heat-resistant. Polymer coating treatment can even increase its service life.",
+            ]
+        }
+
+//- block append head
+//-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+include pug/mixin.pug
+
+block content
+    main.main
+        +banner(bannerObj)
+        +text-block(textObj)
