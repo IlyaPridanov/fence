@@ -6,8 +6,8 @@ block variables
         var bannerObj = {
             img: "metal-bg.jpg",
             caption: "Metal Board Fences",
-            text: "We are excited to offer a special discount on gates and wickets for orders of 100 l/ft. or more.",
-            saleText: "Скидка 30%",
+            text: "We are excited to offer a special discount on gates and wickets for orders of&thinsp;<strong>100 l/ft.</strong> or more.",
+            saleText: "Скидка&thinsp;<strong> 30%</strong>",
         }
 
         var textObj = {
@@ -16,6 +16,62 @@ block variables
                 "When buying a property, whether with a house or not, owners almost immediately raise the question of installing a secure fence. The ideal option in this case can be a chain-link fence. This material is highly popular due to its lightness, strength, and durability. On average, a high-quality chain-link fence can serve you for 15-20 years.",
                 "How is this even possible? It's all about the material used to manufacture the fence. Chain-link fencing is made of galvanized metal wire, which is coated with a polymer coating. The finished fence turns out to be corrosion-resistant and heat-resistant. Polymer coating treatment can even increase its service life.",
             ]
+        }
+
+        var otherObj = {
+            caption: "Other benefits of metal board include their:",
+            arr: [
+                {
+                    width: "32",
+                    height: "38",
+                    icon: "#icon-other-1",
+                    text: "Corrosion-Resistant: The fence does not corrode, thanks to its galvanizing and polymer coating which reliably protect it against moisture;"
+                },
+                {
+                    width: "43",
+                    height: "28",
+                    icon: "#icon-other-2",
+                    text: "Compact and Easy to Transport: The fence is compact, making it easy to transport to your desired location;"
+                },
+                {
+                    width: "39",
+                    height: "40",
+                    icon: "#icon-other-3",
+                    text: "Easy Installation: Installing the fence represents no difficulty and can be done quickly and efficiently;"
+                },
+                {
+                    width: "42",
+                    height: "42",
+                    icon: "#icon-other-4",
+                    text: "Eye-catching appearance: With a huge palette of colors to choose from, metal board fences offer an eye-catching appearance that can be tailored to your style preferences;"
+                },
+                {
+                    width: "42",
+                    height: "40",
+                    icon: "#icon-other-5",
+                    text: "Exceptional Durability: Metal board fences successfully resist winds, temperature changes, and shocks;"
+                },
+                {
+                    width: "38",
+                    height: "38",
+                    img: "icon-other-6.png",
+                    text: "Non-Flammable"
+                },
+            ]
+        }
+
+        var onePriceObj = {
+            img: "img/metal-one-price.png",
+            name: "Metal Board Fences",
+            price: "от 50$ l/ft",
+        }
+
+        var galleryObj = {
+            arr: [
+                "img/gallery-8.png",
+                "img/building-2.png",
+                "img/gallery-1.png",
+            ],
         }
 
 //- block append head
@@ -27,3 +83,7 @@ block content
     main.main
         +banner(bannerObj)
         +text-block(textObj)
+        //- +other(otherObj)
+        //- +one-price(onePriceObj)
+        //- +gallery(galleryObj)
+        include pug/main-page/repair.pug

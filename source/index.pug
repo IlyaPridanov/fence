@@ -1,6 +1,15 @@
 extends pug/layout.pug
 block variables
-    - var title = 'Fence'
+    - 
+        var title = 'Fence'
+
+        var galleryObj = {
+            arr: [
+                "img/price-3.png",
+                "img/building-2.png",
+                "img/gallery-1.png",
+            ],
+        }
 
 //- block append head
 //-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
@@ -15,6 +24,7 @@ block content
         include pug/main-page/why-choose.pug
         include pug/main-page/price.pug
         include pug/main-page/repair.pug
-        include pug/main-page/gallery.pug
+        //- include pug/main-page/gallery.pug
+        +gallery(galleryObj)
         include pug/main-page/our-process.pug
         include pug/main-page/testimonials.pug

@@ -1,0 +1,70 @@
+.banner__container {
+    min-height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner__caption {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include font-r(50px, 600 ,1.1 , normal, $white);
+    text-align: center;
+}
+
+.banner__text {
+    margin: 0 auto 30px;
+    width: 558px;
+    max-width: 100%;
+
+    @include font-r(24px, 400 ,1.1 , normal, $white);
+    text-align: center;
+
+    & strong {
+        font-weight: 600;
+    }
+}
+
+.banner__sale {
+    @include hover();
+    @include center();
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    width: 217px;
+    height: 64px;
+
+    @include font-r(30px, 400 ,1 , normal, $black);
+
+    background-color: $white;
+    border-radius: 12px;
+
+    & strong {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner__container {
+        min-height: 400px;
+    }
+
+    .banner__caption {
+        font-size: 35px;
+    }
+
+    .banner__text {
+        font-size: 18px;
+    }
+
+    .banner__sale {
+        width: 175px;
+        height: 40px;
+
+        font-size: 20px;
+    }
+}

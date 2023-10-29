@@ -1,5 +1,5 @@
 mixin text-block(obj)
-    section.text-block&attributes(attributes)
+    .text-block&attributes(attributes)
         .container.text-block__row
             .text-block__column
                 each item in obj.arr
@@ -11,4 +11,47 @@ mixin banner(obj)
         .container.banner__container
             h1.banner__caption!=obj.caption
             p.banner__text!=obj.text
-            p.banner__sale!=obj.saleText
+            a(href="#price").banner__sale!=obj.saleText
+
+mixin other(obj)
+    section.other&attributes(attributes)
+        .container.other__container
+            h2.h2!=obj.caption
+            ul
+                each item in obj.arr
+                    li  
+                        .other__svg
+                            if item.img
+                                img(src="img/"+item.img, width=item.width, height=item.height)
+                            else
+                                svg(width=item.width height=item.height)
+                                    use(xlink:href=item.icon)
+                        p=item.text
+
+mixin one-price(obj)
+    section.one-price(id="price")&attributes(attributes)
+        .container.one-price__container
+            h2.h2 Price
+            .card.one-price__card
+                img(src=obj.img)
+                h3!=obj.name
+                p!=obj.price
+                a.button(href="#") Рассчитать стоимость
+
+mixin gallery(obj)
+    section.gallery(id="gallery")&attributes(attributes)
+        .container.gallery__container
+            h2.h2 View gallery
+            .slider.gallery__slider
+                .swiper-container
+                    .swiper-wrapper
+                        each item in obj.arr
+                            .swiper-slide
+                                img(src=item)
+                        //- each item in ["img/price-3.png","img/building-2.png","img/gallery-1.png"]
+                button.js-btn-next(type="button")
+                    svg(width="10" height="18")
+                        use(xlink:href="#icon-arrow-slider")
+                button.js-btn-prev(type="button")
+                    svg(width="10" height="18")
+                        use(xlink:href="#icon-arrow-slider")
