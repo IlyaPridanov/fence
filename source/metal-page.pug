@@ -11,11 +11,11 @@ block variables
         }
 
         var textObj = {
-            img: "metal-img.png",
+            img: "metal-img.jpg",
             arr: [
-                "When buying a property, whether with a house or not, owners almost immediately raise the question of installing a secure fence. The ideal option in this case can be a chain-link fence. This material is highly popular due to its lightness, strength, and durability. On average, a high-quality chain-link fence can serve you for 15-20 years.",
-                "How is this even possible? It's all about the material used to manufacture the fence. Chain-link fencing is made of galvanized metal wire, which is coated with a polymer coating. The finished fence turns out to be corrosion-resistant and heat-resistant. Polymer coating treatment can even increase its service life.",
-            ]
+                "This type of fencing, made of high-strength materials using advanced technological lines, lasts for decades and requires virtually no maintenance.",
+                "Metal board fences are three times stronger than their wooden counterparts, thanks to the large number of stiffening ribs that improve material characteristics. Unlike wooden fences, metal board fences do not require regular painting or special care.",
+                "With a protective coating that prevents corrosion in all weather conditions, metal board fencing will retain its attractive appearance for many years.",            ]
         }
 
         var otherObj = {
@@ -83,7 +83,7 @@ block content
     main.main
         +banner(bannerObj)
         +text-block(textObj)
-        //- +other(otherObj)
-        //- +one-price(onePriceObj)
-        //- +gallery(galleryObj)
+        +other(otherObj)
+        +one-price(onePriceObj)
+        +gallery(galleryObj)
         include pug/main-page/repair.pug

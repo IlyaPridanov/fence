@@ -28,15 +28,19 @@ mixin other(obj)
                                     use(xlink:href=item.icon)
                         p=item.text
 
+mixin card(obj)
+    .card&attributes(attributes)
+        img(src=obj.img)
+        .card__column
+            h3!=obj.name
+            p!=obj.price
+            a.button(href="#") Рассчитать стоимость
+
 mixin one-price(obj)
     section.one-price(id="price")&attributes(attributes)
         .container.one-price__container
             h2.h2 Price
-            .card.one-price__card
-                img(src=obj.img)
-                h3!=obj.name
-                p!=obj.price
-                a.button(href="#") Рассчитать стоимость
+            +card(obj).one-price__card
 
 mixin gallery(obj)
     section.gallery(id="gallery")&attributes(attributes)

@@ -32,6 +32,19 @@
     }
 }
 
+.card__column {
+    flex: 0 0 calc(100% - 522px);
+    padding-left: 40px;
+}
+
+@media (max-width: 900px) {
+    .card__column {
+        padding-left: 0;
+
+        text-align: center;
+    }
+}
+
 @media (max-width: 576px) {
     .card {
         & img {

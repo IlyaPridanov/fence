@@ -8,21 +8,61 @@
     align-items: center;
 
     background-color: $grey-4;
+    border-radius: 20px;
 
     & img {
         flex: 0 0 524px;
+        width: 524px;
+        height: auto;
+
+        border-radius: 20px;
     }
 }
 
 .text-block__column {
     flex: 0 0 calc(100% - 524px);
     padding-right: 76px;
+    padding-left: 65px;
 
     & p {
-        @include font-p(16px, 500 ,1.1 , normal, $black-2);
+        margin: 0 0 35px;
+        @include font-p(16px, 500 ,1.5 , normal, $black-2);
     }
 }
 
-// @media screen and (max-width:768px) {
+@media screen and (max-width: 1024px) {
+    .text-block__column {
+        flex: 0 0 50%;
+        padding-right: 35px;
+        padding-left: 0;
+    }
 
-// }
+    .text-block__row {
+        & img {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text-block__row {
+        flex-direction: column;
+
+        & img {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+
+    .text-block__column {
+        flex: 0 0 auto;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .text-block {
+        padding: 50px 0;
+    }
+}
