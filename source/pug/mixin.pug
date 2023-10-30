@@ -34,7 +34,7 @@ mixin card(obj)
         .card__column
             h3!=obj.name
             p!=obj.price
-            a.button(href="#") Рассчитать стоимость
+            button.button(type="button") Рассчитать стоимость
 
 mixin one-price(obj)
     section.one-price(id="price")&attributes(attributes)

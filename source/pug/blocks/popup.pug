@@ -1,0 +1,37 @@
+-
+    var arrInput = [
+        {
+            label: "Населенный пункт доставки",
+            type: "text",
+        },
+        {
+            label: "Общая длина забора",
+            type: "number",
+        },
+        {
+            label: "Ширина забора",
+            type: "number",
+        },
+    ]
+    
+
+.popup.hidden
+    form(action="#")
+        button.popup__close(type="button", aria-label="close")
+            svg(width="13" height="13")
+                use(xlink:href="#icon-close")
+        .popup__content-1
+            each item in arrInput
+                label 
+                    span!=item.label 
+                    input(type!=item.type)
+            button.button(type="button") Next
+        .popup__content-2.hidden
+            h2 Расчёт почти готов!
+            p Finally, please enter your phone number, and one of our managers will contact you shortly with a quote.
+            label 
+                span Phone number: 
+                input(type="tel", placeholder="+1")
+            button.button(type="submit") Отправить
+        .popup__succes.hidden
+            span Done!
