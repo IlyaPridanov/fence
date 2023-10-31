@@ -22,7 +22,7 @@ mixin other(obj)
                     li  
                         .other__svg
                             if item.img
-                                img(src="img/"+item.img, width=item.width, height=item.height)
+                                img(src="img/"+item.img, width=item.width, height=item.height, alt="other")
                             else
                                 svg(width=item.width height=item.height)
                                     use(xlink:href=item.icon)
@@ -30,7 +30,7 @@ mixin other(obj)
 
 mixin card(obj)
     .card&attributes(attributes)
-        img(src=obj.img)
+        img(src=obj.img, alt="card")
         .card__column
             h3!=obj.name
             p!=obj.price
@@ -51,7 +51,7 @@ mixin gallery(obj)
                     .swiper-wrapper
                         each item in obj.arr
                             .swiper-slide
-                                img(src=item)
+                                img(src=item, alt="gallery")
                         //- each item in ["img/price-3.png","img/building-2.png","img/gallery-1.png"]
                 button.js-btn-next(type="button")
                     svg(width="10" height="18")
@@ -59,3 +59,14 @@ mixin gallery(obj)
                 button.js-btn-prev(type="button")
                     svg(width="10" height="18")
                         use(xlink:href="#icon-arrow-slider")
+
+mixin building(obj)
+    section.building&attributes(attributes)
+        .container.building__container
+            h2.h2!=obj.caption
+            .building__row
+                .building__column
+                    ul
+                        each item in obj.list
+                            li.ok-item!=item
+                img(src=obj.img alt="building")

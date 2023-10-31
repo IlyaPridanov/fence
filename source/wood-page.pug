@@ -1,0 +1,58 @@
+extends pug/layout.pug
+block variables
+    -
+        var title = 'Wooden Fences'
+
+        var bannerObj = {
+            img: "wood-bg.jpg",
+            caption: "Wooden Fences",
+            text: "We are excited to offer a special discount on gates and wickets for orders of&thinsp;<strong>100 l/ft.</strong> or more.",
+            saleText: "Скидка&thinsp;<strong> 30%</strong>",
+        }
+
+        var textObj = {
+            img: "wood-img.jpg",
+            arr: [
+                    "When it comes to installing a fence at your summerhouse or country house, wooden fences have always been a popular choice that never goes out of style. Not only are they eye-catching, but they also come in a variety of styles and are relatively affordable.",
+                    "Wood is a highly versatile material that can be used to complement buildings of any architectural style. If you appreciate the environmentally-friendly and durable qualities of wood, a wooden fence may be the perfect solution for you. At our company, we offer affordable wooden fences and we're happy to deliver and install them for you.",                
+                ]
+        }
+
+        var buildingObj = {
+            caption: "Other benefits of Wooden Fences include their:",
+            list: [
+                "One of the key benefits of a wooden fence is its eco-friendliness. As a natural and sustainable material, wood is a safe choice for the environment.",
+                "In addition to its environmental benefits, wooden fences are also more affordable than fences made from other materials.",
+                "Another advantage of wooden fences is the speed of installation. Our team can typically mark out the site, concrete the supports, and install the sections within just one to two days.",
+                "Furthermore, wooden fences come in a variety of colors, allowing you to choose a paint shade that complements your property's design. And if you want to preserve the natural beauty of wood, we can lacquer your fence to protect it from the elements while maintaining its rustic charm.",
+            ],
+            img: "img/3d-one-building.png",
+        }
+
+        var onePriceObj = {
+            img: "img/wood-one-price.png",
+            name: "Wooden Fences",
+            price: "от 45$ l/ft",
+        }
+
+        var galleryObj = {
+            arr: [
+                "img/gallery-8.png",
+                "img/building-2.png",
+                "img/gallery-1.png",
+            ],
+        }
+
+//- block append head
+//-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+include pug/mixin.pug
+
+block content
+    main.main
+        +banner(bannerObj)
+        +text-block(textObj)
+        +building(buildingObj).building--one
+        +one-price(onePriceObj)
+        +gallery(galleryObj)
+        include pug/main-page/repair.pug

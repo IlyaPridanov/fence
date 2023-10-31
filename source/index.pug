@@ -11,9 +11,6 @@ block variables
             ],
         }
 
-//- block append head
-//-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-
 include pug/mixin.pug
 
 block content
@@ -24,7 +21,6 @@ block content
         include pug/main-page/why-choose.pug
         include pug/main-page/price.pug
         include pug/main-page/repair.pug
-        //- include pug/main-page/gallery.pug
         +gallery(galleryObj)
         include pug/main-page/our-process.pug
         include pug/main-page/testimonials.pug

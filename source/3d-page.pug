@@ -1,0 +1,71 @@
+extends pug/layout.pug
+block variables
+    -
+        var title = '3D Fences'
+
+        var bannerObj = {
+            img: "3d-bg.jpg",
+            caption: "3D Fences",
+            text: "We are excited to offer a special discount on gates and wickets for orders of&thinsp;<strong>100 l/ft.</strong> or more.",
+            saleText: "Скидка&thinsp;<strong> 30%</strong>",
+        }
+
+        var textObj = {
+            img: "3d-img.jpg",
+            arr: [
+                    "A 3D fence is a three-dimensional metal mesh structure made of zinc-coated or plastic-coated steel bars with special molding and stiffening ribs. The volumetric effect of the fence is achieved thanks to the V-shaped curves, which lend it a dynamic and textured appearance. However, the unique shape of the fence serves not only decorative purposes but also enhances its technical characteristics. Although 3D fence sections may appear light and fragile, this is a misconception. In reality, a 3D fence is a strong, high-quality, and durable option for any property.",
+                    "3D fences are multifunctional and popular for fencing private land plots and large industrial objects. The exception is objects requiring increased secrecy, as 3D fences may not provide the necessary privacy. An undeniable advantage is also the price. 3D metal fences made of mesh are affordable for everyone, and they offer an attractive, stylish solution to your fencing needs.",
+                ]
+        }
+
+        var otherObj = {
+            caption: "Other benefits of 3D fences include their:",
+            arr: [
+                {
+                    width: "32",
+                    height: "38",
+                    icon: "#icon-other-9",
+                    text: "High durability"
+                },
+                {
+                    width: "42",
+                    height: "40",
+                    icon: "#icon-other-5",
+                    text: "Long life, and easy installation"
+                },
+                {
+                    width: "39",
+                    height: "40",
+                    icon: "#icon-other-3",
+                    text: "Just a few of the benefits of 3D fences"
+                },
+            ]
+        }
+
+        var onePriceObj = {
+            img: "img/3d-one-price.png",
+            name: "3D Fences",
+            price: "от 30$ l/ft",
+        }
+
+        var galleryObj = {
+            arr: [
+                "img/gallery-8.png",
+                "img/building-2.png",
+                "img/gallery-1.png",
+            ],
+        }
+
+//- block append head
+//-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+include pug/mixin.pug
+
+block content
+    main.main
+        +banner(bannerObj)
+        +text-block(textObj)
+        +other(otherObj)
+        +one-price(onePriceObj)
+        +gallery(galleryObj)
+        include pug/main-page/repair.pug

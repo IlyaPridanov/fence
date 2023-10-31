@@ -1,0 +1,56 @@
+extends pug/layout.pug
+block variables
+    -
+        var title = 'Vinyl Fences'
+
+        var bannerObj = {
+            img: "vinyl-bg.jpg",
+            caption: "Vinyl Fences",
+            text: "We are excited to offer a special discount on gates and wickets for orders of&thinsp;<strong>100 l/ft.</strong> or more.",
+            saleText: "Скидка&thinsp;<strong> 30%</strong>",
+        }
+
+        var textObj = {
+            img: "vinyl-img.jpg",
+            arr: [
+                    "Despite their delicate appearance, are remarkably durable. They can withstand accidental impacts without breaking and are impervious to rot and corrosion. A high-quality vinyl fence can endure extreme weather conditions, including scorching heat, frost, and precipitation.",
+                    "Thanks to their flexibility, plastic sections are a breeze to install on uneven and sloping surfaces. Furthermore, these fences require no paint; simply select your preferred color and design. Cleaning them is also effortless.",
+                ]
+        }
+
+        var buildingObj = {
+            caption: "Other benefits of Wooden Fences include their:",
+            list: [
+                "The benefits of our vinyl fences include durability",
+                "Wear resistance",
+                "Resilience",
+                "Ease of use",
+                "Aesthetics and cost-effectiveness",
+            ],
+            img: "img/vinyl-one-building.png",
+        }
+
+        var onePriceObj = {
+            img: "img/vinyl-one-price.png",
+            name: "Vinyl Fences",
+            price: "от 45$ l/ft",
+        }
+
+        var galleryObj = {
+            arr: [
+                "img/vinyl-img.jpg",
+                "img/gallery-9.png",
+                "img/vinyl-one-price.png",
+            ],
+        }
+
+include pug/mixin.pug
+
+block content
+    main.main
+        +banner(bannerObj)
+        +text-block(textObj)
+        +building(buildingObj).building--one
+        +one-price(onePriceObj)
+        +gallery(galleryObj)
+        include pug/main-page/repair.pug
